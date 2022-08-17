@@ -1,0 +1,50 @@
+hydra:
+  run:
+    dir: products
+
+dockerid: 61  # Simulator docker id (prerequisite)
+
+# main func setup
+video_num: 40
+
+# carla setup
+host: 127.0.0.1
+port: 2000
+number_of_vehicles: 80
+tm_port: 8000
+hybrid: 0
+car_lights_on: 1
+hero: 1
+# hero_pct: 0  # probability of vehicle existance
+hero_pct: 0.25  # probability of vehicle existance
+tick_gap: 0.04  # 1 / fps
+# simul_min: 0.2
+simul_min: 1
+fps: 12  # simultanuously fix tick_gap
+width: 640
+height: 480
+fov: 75
+
+dataset: CATS  # dataset name
+scene_num: '04'
+
+weather_on: True
+# weather_conditions
+  # optional weathers:
+# weather: bright  # tested
+# weather: clear  # 
+# weather: cloudy # 4
+weather: dawn  # tested
+# weather: evening  # 3
+# weather: evening_rain  # 2
+# weather: fuzzy  #
+# weather: hazzy_rain
+# weather: morning_fog  # 5
+# weather: rain  # 1
+# weather: reflection
+
+# video processing parameters
+save_mp4: True
+img_format: png
+video_format: mp4
+frame_shift: 50  # fixed
